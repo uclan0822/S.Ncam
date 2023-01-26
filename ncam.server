@@ -1,0 +1,372 @@
+####################### SoftCams ########################
+[reader]
+label                         = constant.cw
+protocol                      = constcw
+device                        = /etc/tuxbox/config/constant.cw
+caid                          = 2600,0B00,0B02,0500,0963,06AD,0940
+group                         = 1
+[reader]
+label                         = emulator
+protocol                      = emu
+device                        = emulator
+disablecrccws        = 0E00:000000
+caid                          = 0500,0100,0604,090F,0E00,1010,1801,2600,2602,2610,4AE1,A101
+detect                        = cd
+ident                         = 0500:000000,007400,007800,021110,023800;0604:000000;090F:000000;0E00:000000;1010:000000;1801:000000,001101,002111,007301;2600:000000;2602:000000;2610:000000;4AE1:000011,000014,0000FE;A101:000000
+group                         = 1
+emmcache                      = 2,1,2,1
+emu_auproviders               = 0604:010200;0E00:000000;1010:000000;2610:000000;4AE1:000011,000014,0000FE;A101:000000
+cacheex                       = 0
+cacheex_maxhop                = 0
+cacheex_allow_request         = 0
+dropbadcws                    = 0
+disablecrccws                 = 0
+######################## OScam EMU ########################
+[reader]
+label                         = constant.cw
+enable                        = 0
+protocol                      = constcw
+device                        = /etc/tuxbox/config/constant.cw
+caid                          = 2600,0B00,0B02,0500,0963,06AD,0940
+group                         = 2
+[reader]
+label                         = emulator
+protocol                      = emu
+device                        = emulator
+disablecrccws_only_for        = 0E00:000000
+caid                          = 0500,0604,090F,0E00,1010,1801,2600,2602,2610,4AE1
+detect                        = cd
+ident                         = 0500:000000,007400,007800,021110,023800;0604:000000;090F:000000;0E00:000000;1010:000000;1801:000000,001101,002111,007301;2600:000000;2602:000000;2610:000000;4AE1:000011,000014,0000FE
+group                         = 1
+emmcache                      = 2,1,2,1
+emu_auproviders               = 0604:010200;0E00:000000;1010:000000;2610:000000;4AE1:000011,000014,0000FE
+######################## OScam SERVER WOE2 ########################
+####################### SAID MABROUR SOBHI ########################
+[reader]
+label                         = lower_card
+enable                        = 0
+protocol                      = internal
+device                        = /dev/sci0
+fix07                         = 0
+detect                        = cd
+mhz                           = 450
+cardmhz                       = 2700
+group                         = 1
+emmcache                      = 1,3,6,0
+
+[reader]
+label                         = upper_card
+enable                        = 0
+protocol                      = internal
+device                        = /dev/sci1
+fix07                         = 0
+detect                        = cd
+mhz                           = 450
+cardmhz                       = 2700
+group                         = 2
+emmcache                      = 1,3,6,0
+
+[reader]
+label                         = d1
+protocol                      = cccam
+device                        = rnervion.podzone.net,65100
+user                          = rnervion
+password                      = rnervion
+inactivitytimeout             = 30
+group                         = 3
+disablecrccws                 = 1
+cccversion                    = 2.0.11
+ccckeepalive                  = 1
+audisabled                    = 1
+
+[reader]
+label                         = c2
+protocol                      = cccam
+device                        = rnervion.podzone.org,65100
+user                          = rnervion
+password                      = rnervion
+inactivitytimeout             = 30
+group                         = 4
+disablecrccws                 = 1
+cccversion                    = 2.0.11
+ccckeepalive                  = 1
+audisabled                    = 1
+[reader]
+label                    = SERVER1
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk22934
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER2
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk22944
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 
+
+[reader]
+label                    = SERVER3
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk22949
+password                 = jazair
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER4
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk22955
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER5
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk22960
+password                 = mohcen
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER6
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk22970
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER7
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk22988
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER8
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk23079
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER9
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk23088
+password                 = mohcen
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER10
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk23096
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER11
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk23114
+password                 = mohcen
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER12
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk23108
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER13
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk23133
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER14
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk23118
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER15
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk23143
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER16
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk23137
+password                 = jazair
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER17
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk23172
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER18
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk23185
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER19
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk23197
+password                 = jazair
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
+
+[reader]
+label                    = SERVER20
+enable                   = 1
+protocol                 = cccam
+device                   = egygold.in,51007
+user                     = cyk23204
+password                 = hassan
+disablecrccws            = 1
+inactivitytimeout        = 30
+group                    = 1
+cccversion               = 2.3.0
+ccckeepalive             = 1
+audisabled               = 1
